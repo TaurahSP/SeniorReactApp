@@ -1,0 +1,13 @@
+version: '3.6'
+
+services:
+    robofriend:
+        container_name: superawesomecontainer
+        build: ./
+        command: npm start
+        working_dir: /usr/src/robofriends
+        ports:
+            - "127.0.0.1:3000:3000"
+        tty: true
+        volumes:
+            - ./:/usr/src/robofriends
